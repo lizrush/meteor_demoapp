@@ -1,14 +1,57 @@
 <head>
-  <title>ip-plotter</title>
+  <title>Map my IP</title>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Pacifico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
+  <div class="jumbotron">
+    <div class="title-container">
+      <h1>Plot my IP</h1>
+    </div>
+  </div>
+
+  <div class="container">
+      <!-- Example row of columns -->
+    <div class="row">
+
+      <div class="col-md-4">
+        <h2>map</h2>
+            {{> map }}
+      </div>
+
+      <div class="col-md-4">
+        <h2>button thing</h2>
+        {{> hello }}
+      </div>
+
+       <div class="col-md-4">
+         <h2>Heading</h2>
+         <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum idligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauriscondimentum nibh, ut fermentum massa justo sit amet risus.</p>
+         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+
+     </div>
+     <hr>
+
+     <footer>
+       <p>nothing in this footer</p>
+     </footer>
+  </div>
 </body>
+
+
+
 
 <template name="hello">
   <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+  <p>You pressed the button {{counter}} times.</p>
+</template>
+
+
+<template name="map">
+  <div id="map-container" style="height:500px; width:900px">
+    <div id="map-canvas" style="width: 100%; height: 100%"></div>
+  </div>
 </template>
