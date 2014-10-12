@@ -1,17 +1,26 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault("counter", 0);
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get("counter");
+  Template.ipform.events({
+    'click button': function () {
+      console.log("form button clicked");
+      // TODO:  input as array
+      //        iterate over ips
+      //        fetch latlongs
+      //        drop pins on map
     }
   });
 
-  Template.hello.events({
+  Template.example.events({
     'click button': function () {
-      // increment the counter when button is clicked
-      Session.set("counter", Session.get("counter") + 1);
+      console.log("example button clicked");
+      // TODO:  store lat longs for hard coded ips
+      //        drop pins on map
+  });
+
+  Template.map.events({
+    'click button': function () {
+      console.log("clear map button clicked");
+      // TODO: clear map of previously dropped pins
     }
   });
 }
