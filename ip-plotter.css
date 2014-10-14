@@ -27,3 +27,17 @@ h1 {
 .col-md-4 {
   border: 1px dashed red;
 }
+
+#map-container {
+  border: 1px dashed purple;
+  height: 500px;
+  width: 500px;
+  margin: auto;
+}
+
+#map-canvas {
+  border: 1px dashed blue;
+  height: 80%;
+  width: 80%;
+  margin: auto;
+}
