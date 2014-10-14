@@ -34,7 +34,6 @@ if (Meteor.isClient) {
       Mapper.removeMarkers();
     }
   });
-
 }
 
 if (Meteor.isServer) {
