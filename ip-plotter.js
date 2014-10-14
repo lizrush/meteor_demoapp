@@ -31,7 +31,7 @@ if (Meteor.isClient) {
 
   Template.map.events({
     'click button': function() {
-      // TODO: clear map of previously dropped pins
+      Mapper.removeMarkers();
     }
   });
 
