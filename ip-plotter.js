@@ -1,23 +1,16 @@
 if (Meteor.isClient) {
 
   Template.ipform.events({
-    'click button': function () {
-
+    'click button': function() {
       var input_string = document.getElementById("ip-inputs").value;
       var ip_array = input_string.replace(/\s+/g, '').split(",");
 
-      console.log(ip_array)
-      // TODO:
-      //        iterate over ips
-      //        fetch latlongs
-      //        drop pins on map
+      Mapper.createMarkersFromIPs(ip_array);
     }
   });
 
   Template.example.events({
-    'click button': function () {
-      console.log("example button clicked");
-
+    'click button': function(){
       var example_ips = [[51.5, -0.13],
                           [57.7333, 12.05],
                           [13.7, 100.4667],
@@ -28,7 +21,7 @@ if (Meteor.isClient) {
                           [17.4833, -88.1833],
                           [-8.05, -34.9]];
 
-      //        drop pins on map
+      // Mapper.createMarkersFromIPs(example_ips);
     }
   });
 
@@ -37,7 +30,7 @@ if (Meteor.isClient) {
   };
 
   Template.map.events({
-    'click button': function () {
+    'click button': function() {
       // TODO: clear map of previously dropped pins
     }
   });
