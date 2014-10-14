@@ -5,7 +5,7 @@ if (Meteor.isClient) {
       var input_string = document.getElementById("ip-inputs").value;
       var ip_array = input_string.replace(/\s+/g, '').split(",");
 
-      Mapper.createMarkersFromIPs(ip_array);
+      Mapper.createMarkersFromInput(ip_array);
     }
   });
 
@@ -21,7 +21,7 @@ if (Meteor.isClient) {
                           [17.4833, -88.1833],
                           [-8.05, -34.9]];
 
-      // Mapper.createMarkersFromIPs(example_ips);
+      Mapper.createMarkersFromSample(example_ips);
     }
   });
 
