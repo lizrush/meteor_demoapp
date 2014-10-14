@@ -32,12 +32,16 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.map.rendered = function() {
+    Mapper.initializeMap("map-canvas");
+  };
+
   Template.map.events({
     'click button': function () {
-      console.log("clear map button clicked");
       // TODO: clear map of previously dropped pins
     }
   });
+
 }
 
 if (Meteor.isServer) {
